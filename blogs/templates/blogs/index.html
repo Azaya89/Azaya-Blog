@@ -1,0 +1,10 @@
+{% extends "blogs/base.html" %}
+
+{% block page_header %}
+<div class="jumbotron">
+  <h2 class="display-4">Write about your interests.</h2>
+  <p class="lead">Have your say. Write about the things you are interested in and let others read your thoughts and opinions.</p>
+  <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"
+  role="button">Register &raquo;</a>
+</div>
+{% endblock page_header %}
