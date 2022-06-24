@@ -8,6 +8,10 @@ def index(request):
     """The home page for Blog."""
     return render(request, 'blogs/index.html')
 
+def register_error(request):
+    """Show an error page."""
+    return render(request, 'blogs/register_error.html')
+
 def posts(request):
     """Show all posts."""
     posts = BlogPost.objects.order_by('date_added')

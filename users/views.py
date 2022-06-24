@@ -10,6 +10,8 @@ def register(request):
     else:
     # Process completed form.
         form = UserCreationForm(data=request.POST)
+        # if form.errors():
+        #     return redirect('blogs:register_error')
         if form.is_valid():
             new_user = form.save()
         # Log the user in and then redirect to home page.
